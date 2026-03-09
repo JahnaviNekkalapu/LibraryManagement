@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High-Tech Library Management System</title>
+  <link rel="stylesheet" href="css/books.css">
+</head>
+<body>
+  <header>
+    <h1>Library Management System</h1>
+  </header>
+
+  <section class="container">
+    <div class="search-box">
+      <h2>Search Books</h2>
+      <input type="text" id="search" placeholder="Enter book title or author">
+      <button onclick="searchBooks()">Search</button>
+    </div>
+
+    <div class="book-list">
+      <h2>Book List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Book ID</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="bookTable">
+          <!-- Books will be populated here -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="borrower-form">
+      <h2>Borrower Information</h2>
+      <form onsubmit="issueBook(); return false;">
+        <label for="borrowerName">Name:</label>
+        <input type="text" id="borrowerName" required>
+
+        <label for="borrowerID">ID:</label>
+        <input type="text" id="borrowerID" required>
+
+        <label for="bookID">Book ID:</label>
+        <input type="text" id="bookID" required>
+
+        <button type="submit">Issue Book</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Library Management System | All Rights Reserved</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
